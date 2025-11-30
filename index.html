@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DPCPD | 稻田光合临床病理诊断中心</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              medical: {
+                DEFAULT: '#0099A8', // Medical Lake Blue
+                dark: '#007A86',
+              },
+              deep: '#1D2B36', // Deep Rock Grey
+              cold: '#8C9CAB', // Cold Grey
+              section: '#F7F9FA', // Section Grey
+            },
+            fontFamily: {
+              sans: ['"Inter"', '"Noto Sans SC"', 'sans-serif'],
+              serif: ['"Noto Serif SC"', 'serif'],
+            },
+            boxShadow: {
+              'soft': '0 4px 20px -2px rgba(29, 43, 54, 0.05)',
+              'glow': '0 0 15px rgba(0, 153, 168, 0.15)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background-color: #E2E8F0;
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background-color: #CBD5E1;
+      }
+      
+      /* Subtle loading line animation */
+      @keyframes loadLine {
+        0% { width: 0%; left: 0; }
+        50% { width: 60%; left: 20%; }
+        100% { width: 100%; left: 100%; }
+      }
+      .loading-line {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 2px;
+        background-color: #0099A8;
+        z-index: 9999;
+        animation: loadLine 1.5s ease-in-out infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1"
+  }
+}
+</script>
+</head>
+  <body class="bg-white text-deep antialiased font-light selection:bg-medical selection:text-white">
+    <div id="root"></div>
+  </body>
+</html>
